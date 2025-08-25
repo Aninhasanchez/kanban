@@ -1,0 +1,13 @@
+@use './_cabecalho';
+@use './_variaveis';
+
+
+body{
+    background-color: $primary;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
