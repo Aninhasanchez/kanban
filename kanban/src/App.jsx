@@ -1,13 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './Styles/main.scss'
+import { Cabecalho } from './Componentes/Cabecalho'
+import { BarraNavegacao } from './Componentes/BarraNavegacao'
 
 function App() {
 
   return (
-    
-    
+    <>
+    <Cabecalho/>
+    <BarraNavegacao/>
+    </>
   )
 }
 
