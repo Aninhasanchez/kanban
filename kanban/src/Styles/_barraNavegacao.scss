@@ -1,18 +1,46 @@
-@use './_variaveis' as *;
+@use './variaveis' as *;
 
-.barraNavegacao{
-    background-color: $accent;
+.barra{
+    background-color: $primary;
+    color:$text-light;
     height: 40px;
-    padding: 10px;
     margin: 0;
-}
 
- ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-right: 20px;
-    gap: 20px;
-    padding: 10px;
-    color: $back;
- }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 20px;
+        font-size: 18px;
+        gap: 20px;
+        align-items: center;
+        padding: 10px;
+    }
+    li
+      {
+        text-decoration: none;
+        list-style: none;
+
+        a {
+      text-decoration: none;
+      color: $text-light;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      font-family: $accent;
+;
+
+      &:hover {
+        color: $primary; 
+        border: 2px solid $button;
+        padding: 0.2em;
+        background-color: $button;
+        border-radius: 16px;
+        
+      }
+
+      &.active {
+        font-weight: bold;
+        border-bottom: 2px solid $accent;
+      }
+    }
+    }
+}
