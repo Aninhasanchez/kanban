@@ -1,14 +1,8 @@
+@use './_variaveis' as *;
 @use './_cabecalho';
 @use './_barraNavegacao';
-@use './_variaveis';
+@use './_cadastro';
+@use './quadro';
+@use './coluna';
+@use './tarefa';
 
-
-body{
-    background-color: $primary
-}
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
