@@ -1,0 +1,111 @@
+
+@use './variaveis' as *;
+@use "sass:color";
+
+.tarefa {
+  background: $back;
+  border: 1px solid $secondary;
+  border-radius: $borda-arredondada;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: $font-primary;
+  color: $text-dark;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform .2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  header {
+    margin-bottom: .5rem;
+
+    h3 {
+      font-size: 1.2rem;
+      color: $accent;
+      margin: 0 0 .5rem 0;
+    }
+  }
+
+  dl {
+    margin: 0 0 1rem 0;
+
+    dt {
+      font-weight: bold;
+      display: inline;
+      margin-right: .3rem;
+    }
+
+    dd {
+      display: inline;
+      margin: 0 .8rem 0 0;
+    }
+  }
+
+  &__acoes {
+    display: flex;
+    gap: .5rem;
+    margin-bottom: 1rem;
+
+    button {
+      background: $button;
+      border: none;
+      border-radius: $borda-arredondada;
+      padding: .4rem .8rem;
+      font-weight: bold;
+      color: $text-dark;
+      cursor: pointer;
+      transition: background .2s ease, transform .2s ease;
+
+      &:hover,
+      &:focus {
+        background: color.adjust($accent, $lightness: 10%);
+        transform: scale(1.05);
+        outline: 2px solid $accent;
+      }
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    label {
+      font-weight: bold;
+      font-size: .9rem;
+    }
+
+    select {
+      padding: .4rem;
+      border-radius: $borda-arredondada;
+      border: 1px solid $secondary;
+      font-size: .9rem;
+      background: $text-light;
+      color: $text-dark;
+
+      &:focus {
+        outline: 2px solid $accent;
+      }
+    }
+
+    button {
+      background: color.adjust($accent, $lightness: 10%);
+      color: $text-light;
+      border: none;
+      padding: .5rem 1rem;
+      border-radius: $borda-arredondada;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background .2s ease, transform .2s ease;
+
+      &:hover,
+      &:focus {
+        background: color.adjust($accent, $lightness: 10%);
+        transform: scale(1.05);
+        outline: 2px solid $primary;
+      }
+    }
+  }
+}
