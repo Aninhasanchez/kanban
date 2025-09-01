@@ -1,0 +1,25 @@
+
+@use "./_variaveis" as *;
+
+.conteiner {
+  max-width: 1600px;
+  margin: 2rem auto;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: $secondary;
+  border-radius: 18px;
+}
+
+.lista {
+  width: 100%;
+}
+
+
+.atividades {
+  display: flex;              
+  justify-content: center;    
+  flex-wrap: wrap;            
+  gap: 1.5rem;                
+}
